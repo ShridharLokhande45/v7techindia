@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+<body>
+    
+          
+         <h2 style="text-align:center; margin-top:50px;">Contact Us</h2>
+          <div style="
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          padding-top: 50px;
+        ">
+  <form action="#" method="post" style="
+  width: 100%;
+  max-width: 500px;
+  background: #ffffff;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+">
+
+  <label>Full Name:</label><br>
+  <input type="text" name="fullname" required style="width:100%; padding:8px; margin-top:5px;"><br><br>
+
+  <label>Company Name:</label><br>
+  <input type="text" name="company" required style="width:100%; padding:8px; margin-top:5px;"><br><br>
+
+  <label>Email (Gmail):</label><br>
+  <input type="email" name="email" required placeholder="example@gmail.com" style="width:100%; padding:8px; margin-top:5px;"><br><br>
+
+  <label>Contact Number:</label><br>
+  <input type="tel" name="contact" required pattern="[0-9]{10}" placeholder="10-digit number" style="width:100%; padding:8px; margin-top:5px;"><br><br>
+
+  <label>Message:</label><br>
+  <textarea name="message" required rows="4" style="width:100%; padding:8px; margin-top:5px;"></textarea><br><br>
+
+  <div style="text-align: center; margin-top: 10px;">
+    <button type="submit" style="
+      background:#3f8f36; 
+      color:white; 
+      padding:12px 30px; 
+      border:none; 
+      border-radius:25px;
+      cursor:pointer;
+      font-size:16px;
+      font-weight:bold;
+      transition:0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    "
+    onmouseover="this.style.transform='scale(1.07)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.2)'"
+    onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 10px rgba(0,0,0,0.1)'"
+    >
+      Submit
+    </button>
+  </div>
+
+</form>
+
+</body>
+</html>
