@@ -4,62 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
+
+    <!-- Google Simple Font (Roboto) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        /* Apply Google Font to entire page */
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Toast Box */
+        #toast {
+            visibility: hidden;
+            min-width: 250px;
+            background: #3f8f36;
+            color: white;
+            text-align: center;
+            border-radius: 8px;
+            padding: 16px;
+            position: fixed;
+            z-index: 1000;
+            left: 50%;
+            bottom: 40px;
+            transform: translateX(-50%);
+            font-size: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+         h2 {
+            color: #2f6a28;
+            font-weight: 700;
+        }
+    </style>
+
+    <script>
+        function showToastAndRedirect(event) {
+            event.preventDefault();
+
+            let toast = document.getElementById("toast");
+
+            toast.style.visibility = "visible";
+            toast.style.opacity = "1";
+
+            setTimeout(() => {
+                toast.style.opacity = "0";
+                toast.style.visibility = "hidden";
+                window.location.href = "index.html";
+            }, 2000);
+        }
+    </script>
+
 </head>
 <body>
-    
-          
-         <h2 style="text-align:center; margin-top:50px;">Contact Us</h2>
-          <div style="
-          display: flex;
-          justify-content: center;
-          align-items: flex-start;
-          padding-top: 50px;
+
+    <div id="toast">Thank you! Your information has been submitted.</div>
+
+    <h2 style="text-align:center; margin-top:50px;">Contact Us</h2>
+
+    <div style="display:flex; justify-content:center; align-items:flex-start; padding-top:50px;">
+
+        <form onsubmit="showToastAndRedirect(event)" style="
+            width: 100%;
+            max-width: 500px;
+            background: #ffffff;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         ">
-  <form action="#" method="post" style="
-  width: 100%;
-  max-width: 500px;
-  background: #ffffff;
-  padding: 50px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-">
 
-  <label>Full Name:</label><br>
-  <input type="text" name="fullname" required style="width:100%; padding:8px; margin-top:5px;"><br><br>
+            <label>Full Name:</label><br>
+            <input type="text" name="fullname" required style="width:100%; padding:8px; margin-top:5px;"><br><br>
 
-  <label>Company Name:</label><br>
-  <input type="text" name="company" required style="width:100%; padding:8px; margin-top:5px;"><br><br>
+            <label>Company Name:</label><br>
+            <input type="text" name="company" required style="width:100%; padding:8px; margin-top:5px;"><br><br>
 
-  <label>Email (Gmail):</label><br>
-  <input type="email" name="email" required placeholder="example@gmail.com" style="width:100%; padding:8px; margin-top:5px;"><br><br>
+            <label>Email (Gmail):</label><br>
+            <input type="email" name="email" required placeholder="example@gmail.com" style="width:100%; padding:8px; margin-top:5px;"><br><br>
 
-  <label>Contact Number:</label><br>
-  <input type="tel" name="contact" required pattern="[0-9]{10}" placeholder="10-digit number" style="width:100%; padding:8px; margin-top:5px;"><br><br>
+            <label>Contact Number:</label><br>
+            <input type="tel" name="contact" required pattern="[0-9]{10}" placeholder="10-digit number" style="width:100%; padding:8px; margin-top:5px;"><br><br>
 
-  <label>Message:</label><br>
-  <textarea name="message" required rows="4" style="width:100%; padding:8px; margin-top:5px;"></textarea><br><br>
+            <label>Message:</label><br>
+            <textarea name="message" required rows="4" style="width:100%; padding:8px; margin-top:5px;"></textarea><br><br>
 
-  <div style="text-align: center; margin-top: 10px;">
-    <button type="submit" style="
-      background:#3f8f36; 
-      color:white; 
-      padding:12px 30px; 
-      border:none; 
-      border-radius:25px;
-      cursor:pointer;
-      font-size:16px;
-      font-weight:bold;
-      transition:0.3s ease;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-    "
-    onmouseover="this.style.transform='scale(1.07)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.2)'"
-    onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 10px rgba(0,0,0,0.1)'"
-    >
-      Submit
-    </button>
-  </div>
+            <div style="text-align: center; margin-top: 10px;">
+                <button type="submit" style="
+                    background:#3f8f36; 
+                    color:white; 
+                    padding:12px 30px; 
+                    border:none; 
+                    border-radius:25px;
+                    cursor:pointer;
+                    font-size:16px;
+                    transition:0.3s ease;
+                    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+                "
+                onmouseover="this.style.transform='scale(1.05)'"
+                onmouseout="this.style.transform='scale(1)'">
+                    Submit
+                </button>
+            </div>
 
-</form>
+        </form>
+
+    </div>
 
 </body>
 </html>
